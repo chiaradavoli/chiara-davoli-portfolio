@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact - www.chiaradavoli.com</title>
+  <style>
+    /* Stili CSS per la pagina Contact */
+    @font-face {
+      font-family: 'Aeonik Regular';
+      src: url('fonts/Aeonik-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Floreal';
+      src: url('fonts/Floreal.ttf') format('truetype');
+    }
+
+
+    body {
+      background-color: white;
+      background-image: none;
+      color: black;
+      font-family: Aeonik Regular, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: transparent;
+      opacity: 1;
+      z-index: 9999;
+      transition: background-color 0.3s ease;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+    }
+
+    .nav-buttons {
+      display: flex;
+    }
+
+    .nav-buttons a {
+      background-color: transparent;
+      color: black;
+      border: none;
+      margin-left: 30px;
+      cursor: pointer;
+      font-size: 18px;
+      text-decoration: none;
+      color: black;
+    }
+
+
+    .nav-buttons .projects-button {
+      text-decoration: underline;
+    }
+
+    .nav-buttons {
+
+      margin-left: auto;
+    }
+
+
+    .section {
+      margin-top: 50px;
+      padding: 20px;
+    }
+
+    .section-content {
+      height: 1000px;
+    }
+
+    .centered-words {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+
+    }
+
+    .centered-words {
+      text-align: center;
+    }
+
+
+    .centered-words .word1 {
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+
+    .centered-words .word1:hover {
+      color: white;
+
+    }
+
+    .centered-words .word1:hover sup {
+      color: white;
+    }
+
+    .centered-words .word2 {
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+
+    .centered-words .word2:hover {
+      color: white;
+    }
+
+    .centered-words .word2:hover sup {
+      color: white;
+    }
+
+    .centered-words .word3 {
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+
+    .centered-words .word3:hover {
+      color: white;
+    }
+
+    .centered-words .word3:hover sup {
+      color: white;
+    }
+
+    .centered-words .word4 {
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+
+    .centered-words .word4:hover {
+      color: white;
+    }
+
+    .centered-words .word4:hover sup {
+      color: white;
+    }
+
+    .centered-words .word5 {
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+
+    .centered-words .word5:hover {
+      color: white;
+    }
+
+    .centered-words .word5:hover sup {
+      color: white;
+    }
+
+    .centered-words .word6 {
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+
+    .centered-words .word6:hover {
+      color: white;
+    }
+
+    .centered-words .word6:hover sup {
+      color: white;
+    }
+
+
+    .centered-words p {
+      margin: 10px;
+    }
+
+    .centered-words span {
+      font-size: 80px;
+      font-family: 'Floreal', Arial, sans-serif;
+    }
+
+    .centered-words sup {
+      font-size: 12px;
+      font-family: 'Aeonik Regular', Arial, sans-serif;
+      vertical-align: super;
+    }
+
+
+
+    .return-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 50px;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      border-radius: 40px;
+      font-family: 'Floreal', Arial, sans-serif;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .return-button img {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+
+    .return-button:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .return-button:hover img {
+      filter: invert(100%);
+    }
+
+    .footer-right {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 20px;
+      font-family: 'Aeonik Regular', Arial, sans-serif;
+      font-size: 16px;
+      text-align: right;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="img/logopersonal-black.png" class="logo" id="logo">
+    <div class="nav-buttons">
+      <a href="about.html" class="button" id="about-button">About</a>
+      <a href="projects.html" class="projects-button" id="projects-button">Projects</a>
+      <a href="contact.html" class="button" id="contact-button">Contact</a>
+    </div>
+  </header>
+
+
+  <div class="centered-words">
+    <p><span class="word1" onmouseover="showImage1(); changeTextColor('about-button')" onmouseout="hideImage1(); resetTextColor('about-button')" onclick="redirectTo('ossimoro.html')">Ossimoro<sup>2020</sup></span></p>
+    <p><span class="word2" onmouseover="showImage2(); changeTextColor('about-button')" onmouseout="hideImage2(); resetTextColor('about-button')" onclick="redirectTo('ossimoro.html')">Multiway<sup>2020</sup></span></p>
+    <p><span class="word3" onmouseover="showImage3()" onmouseout="hideImage3()" onclick="redirectTo('ossimoro.html')" >Collaterale<sup>2021</sup></span></p>
+    <p><span class="word4" onmouseover="showImage4()" onmouseout="hideImage4()" onclick="redirectTo('ossimoro.html')">Caliptra<sup>2021</sup></span></p>
+    <p><span class="word5" onmouseover="showImage5()" onmouseout="hideImage5()" onclick="redirectTo('ossimoro.html')">Aphonia<sup>2022</sup></span></p>
+    <p><span class="word6" onmouseover="showImage6()" onmouseout="hideImage6()" onclick="redirectTo('ossimoro.html')">Inverso<sup>2022</sup></span></p>
+  </div>
+
+  <div class="section">
+
+    <div class="section-content">
+      <!-- Contenuto della sezione "About" -->
+    </div>
+
+  </div>
+  <a href="index.html" class="return-button">
+    <img src="img/arrow.png" alt="Icon">
+    <span>GO BACK HOME</span>
+  </a>
+  </div>
+
+  <div class="footer-right">2023</div>
+
+  <script>
+
+  function changeTextColor(elementId) {
+  document.getElementById(elementId).style.color = "white";
+}
+
+function resetTextColor(elementId) {
+  document.getElementById(elementId).style.color = "";
+}
+
+    function showImage1() {
+      document.body.style.backgroundImage = "url('img/biolago.png')";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundPosition = "center";
+
+      // Modifica il colore del testo delle scritte "About", "Projects" e "Contact" a bianco
+      document.getElementById("about-button").style.color = "white";
+      document.getElementById("projects-button").style.color = "white";
+      document.getElementById("contact-button").style.color = "white";
+      document.getElementById("logo").style.filter = "invert(100%)";
+
+    }
+
+    function hideImage1() {
+      document.body.style.backgroundImage = "none";
+      document.body.style.backgroundSize = "auto";
+
+      document.getElementById("about-button").style.color = ""; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "";
+      document.getElementById("contact-button").style.color = "";
+      document.getElementById("logo").style.filter = "none";
+    }
+
+    function showImage2() {
+      document.body.style.backgroundImage = "url('img/multiway.png')";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundPosition = "center";
+
+      document.getElementById("about-button").style.color = "white"; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "white";
+      document.getElementById("contact-button").style.color = "white";
+      document.getElementById("logo").style.filter = "invert(100%)";
+
+    }
+
+    function hideImage2() {
+      document.body.style.backgroundImage = "none";
+      document.body.style.backgroundSize = "auto";
+
+      document.getElementById("about-button").style.color = ""; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "";
+      document.getElementById("contact-button").style.color = "";
+      document.getElementById("logo").style.filter = "none";
+    }
+
+    function showImage3() {
+      document.body.style.backgroundImage = "url('img/collaterale.png')";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundPosition = "center";
+
+      document.getElementById("about-button").style.color = "white"; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "white";
+      document.getElementById("contact-button").style.color = "white";
+      document.getElementById("logo").style.filter = "invert(100%)";
+
+    }
+
+    function hideImage3() {
+      document.body.style.backgroundImage = "none";
+      document.body.style.backgroundSize = "auto";
+
+      document.getElementById("about-button").style.color = ""; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "";
+      document.getElementById("contact-button").style.color = "";
+      document.getElementById("logo").style.filter = "none";
+    }
+
+    function showImage4() {
+      document.body.style.backgroundImage = "url('img/caliptra.png')";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundPosition = "center";
+
+      document.getElementById("about-button").style.color = "white"; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "white";
+      document.getElementById("contact-button").style.color = "white";
+      document.getElementById("logo").style.filter = "invert(100%)";
+
+    }
+
+    function hideImage4() {
+      document.body.style.backgroundImage = "none";
+      document.body.style.backgroundSize = "auto";
+
+      document.getElementById("about-button").style.color = ""; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "";
+      document.getElementById("contact-button").style.color = "";
+      document.getElementById("logo").style.filter = "none";
+    }
+
+
+    function showImage5() {
+      document.body.style.backgroundImage = "url('img/aphonia.png')";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundPosition = "center";
+
+      document.getElementById("about-button").style.color = "white"; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "white";
+      document.getElementById("contact-button").style.color = "white";
+      document.getElementById("logo").style.filter = "invert(100%)";
+
+    }
+
+    function hideImage5() {
+      document.body.style.backgroundImage = "none";
+      document.body.style.backgroundSize = "auto";
+
+      document.getElementById("about-button").style.color = ""; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "";
+      document.getElementById("contact-button").style.color = "";
+      document.getElementById("logo").style.filter = "none";
+    }
+
+    function showImage6() {
+      document.body.style.backgroundImage = "url('img/inverso.png')";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundPosition = "center";
+
+      document.getElementById("about-button").style.color = "white"; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "white";
+      document.getElementById("contact-button").style.color = "white";
+      document.getElementById("logo").style.filter = "invert(100%)";
+
+    }
+
+    function hideImage6() {
+      document.body.style.backgroundImage = "none";
+      document.body.style.backgroundSize = "auto";
+
+      document.getElementById("about-button").style.color = ""; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "";
+      document.getElementById("contact-button").style.color = "";
+      document.getElementById("logo").style.filter = "none";
+    }
+
+    function redirectTo(url) {
+  window.location.href = url;
+}
+  </script>
+
+
+</body>
+
+</html>
