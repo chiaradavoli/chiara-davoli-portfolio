@@ -11,9 +11,19 @@
     }
 
     @font-face {
+      font-family: 'Aeonik Light';
+      src: url('fonts/Aeonik-Light.ttf') format('truetype');
+    }
+
+    @font-face {
       font-family: 'Floreal';
       src: url('fonts/Floreal.ttf') format('truetype');
     }
+
+    @font-face {
+  font-family: 'CustomFont';
+  src: url('fonts/CustomFont.ttf') format('truetype');
+}
 
     body {
       background-color: white;
@@ -22,26 +32,21 @@
       margin: 0;
       padding: 0;
       overflow: auto;
-
-  background-image: url('img/01.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+    }
 
     header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: white;
-    opacity: 0.7;
-    z-index: 9999;
-  }
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: white;
+      opacity: 1;
+      z-index: 9999;
+    }
 
     .logo {
       width: 60px;
@@ -54,7 +59,6 @@
 
     .nav-buttons a {
       background-color: transparent;
-
       color: black;
       border: none;
       margin-left: 30px;
@@ -63,20 +67,39 @@
       text-decoration: none;
     }
 
-
     .nav-buttons .about-button {
       text-decoration: underline;
     }
 
     .nav-buttons {
-
       margin-left: auto;
     }
-
 
     .section {
       margin-top: 50px;
       padding: 20px;
+      display: flex; /* Utilizza il layout delle colonne */
+      align-items: center; /* Allinea il contenuto verticalmente */
+    }
+
+    .section-image {
+      flex: 1; /* Occupa 50% della larghezza */
+      max-width: 60%;
+      padding: 0 20px;
+    }
+
+    .section-image img {
+  max-width: 80%;
+  height: auto;
+  outline: 0.5px solid black; /* Aggiungi un outline nero di 2px */
+}
+
+    .section-text {
+      flex: 1; /* Occupa 50% della larghezza */
+      max-width: 50%;
+      padding: 0 20px;
+      font-family: Aeonik Light;
+      font-size: 40px;
     }
 
     .section-content {
@@ -115,35 +138,39 @@
     .return-button:hover img {
       filter: invert(100%);
     }
-
   </style>
 </head>
 
 <body>
 
-    <header>
-      <img src="img/logopersonal-black.png" class="logo">
-      <div class="nav-buttons">
-        <a href="about.html" class="about-button">About</a>
-        <a href="projects.html" class="button">Projects</a>
-        <a href="contact.html" class="button">Contact</a>
-      </div>
-    </header>
-
-    <div class="section">
-
-      <div class="section-content">
-        <!-- Contenuto della sezione "About" -->
-        </div>
-
-      </div>
-      <a href="index.html" class="return-button">
-        <img src="img/arrow.png" alt="Icon">
-        <span>GO BACK HOME</span>
-      </a>
+  <header>
+    <img src="img/logopersonal-black.png" class="logo">
+    <div class="nav-buttons">
+      <a href="about.html" class="about-button">About</a>
+      <a href="projects.html" class="button">Projects</a>
+      <a href="contact.html" class="button">Contact</a>
     </div>
+  </header>
 
+  <div class="section">
+    <div class="section-image">
+      <img src="img/helloitsmee.png" alt="Image">
+    </div>
+    <div class="section-text">
+      <!-- Testo della sezione "About" -->
+      <p>Hi, my name is Chiara and I’m a <span style="font-family: 'CustomFont', Floreal, sans-serif;"> Milano based freelance designer.
+        <span style="font-family: 'AnotherCustomFont', Aeonik Light, sans-serif;"> I don’t really like categories, and I think that design is fluid,
+        so I like to call my self a <span style="font-family: 'CustomFont', Floreal, sans-serif;"> multidisciplinary designer<span style="font-family: 'AnotherCustomFont', Aeonik Light, sans-serif;">.
+        I mainly love to work in the <span style="font-family: 'CustomFont', Floreal, sans-serif;"> hybrid space between communication and spatial design <span style="font-family: 'AnotherCustomFont', Aeonik Light, sans-serif;">
+        and I’m passionate about giving form to the <span style="font-family: 'CustomFont', Floreal, sans-serif;"> unknown<span style="font-family: 'AnotherCustomFont', Aeonik Light, sans-serif;">. <p> Get to know me ↓ </p>
+    </div>
+  </div>
 
-  </body>
+  <a href="index.html" class="return-button">
+    <img src="img/arrow.png" alt="Icon">
+    <span>GO BACK HOME</span>
+  </a>
 
-  </html>
+</body>
+
+</html>
