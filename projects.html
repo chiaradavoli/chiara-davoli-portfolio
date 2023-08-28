@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Contact - www.chiaradavoli.com</title>
+  <title> Hi, welcome to my portfolio! ✦ </title>
   <style>
     /* Stili CSS per la pagina Contact */
     @font-face {
@@ -188,6 +188,21 @@
       color: white;
     }
 
+    .centered-words .word7 {
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+
+    .centered-words .word7:hover {
+      color: white;
+    }
+
+    .centered-words .word7:hover sup {
+      color: white;
+    }
+
 
     .centered-words p {
       margin: 10px;
@@ -271,6 +286,7 @@
     <p><span class="word4" onmouseover="showImage4()" onmouseout="hideImage4()" onclick="redirectTo('ossimoro.html')">Caliptra<sup>2021</sup></span></p>
     <p><span class="word5" onmouseover="showImage5()" onmouseout="hideImage5()" onclick="redirectTo('ossimoro.html')">Aphonia<sup>2022</sup></span></p>
     <p><span class="word6" onmouseover="showImage6()" onmouseout="hideImage6()" onclick="redirectTo('ossimoro.html')">Inverso<sup>2022</sup></span></p>
+    <p><span class="word6" onmouseover="showImage7()" onmouseout="hideImage7()" onclick="redirectTo('ossimoro.html')">Nuur<sup>2023</sup></span></p>
   </div>
 
   <div class="section">
@@ -429,6 +445,29 @@ function resetTextColor(elementId) {
     }
 
     function hideImage6() {
+      document.body.style.backgroundImage = "none";
+      document.body.style.backgroundSize = "auto";
+
+      document.getElementById("about-button").style.color = ""; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "";
+      document.getElementById("contact-button").style.color = "";
+      document.getElementById("logo").style.filter = "none";
+    }
+
+    function showImage7() {
+      document.body.style.backgroundImage = "url('img/nuur.png')";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundPosition = "center";
+
+      document.getElementById("about-button").style.color = "white"; // Utilizza una stringa vuota per ripristinare il valore predefinito
+      document.getElementById("projects-button").style.color = "white";
+      document.getElementById("contact-button").style.color = "white";
+      document.getElementById("logo").style.filter = "invert(100%)";
+
+    }
+
+    function hideImage7() {
       document.body.style.backgroundImage = "none";
       document.body.style.backgroundSize = "auto";
 
