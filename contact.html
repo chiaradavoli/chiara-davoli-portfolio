@@ -70,10 +70,21 @@
       align-items: center;
     }
 
-    .text-image img {
-      max-width: 90%;
-      max-height: 90%;
-    }
+    @keyframes slide-in {
+  0% {
+    transform: translateX(-100%); /* Inizia fuori dalla schermata a sinistra */
+  }
+  100% {
+    transform: translateX(0); /* Termina la transizione a sinistra */
+  }
+}
+
+.text-image img {
+  max-width: 90%;
+  max-height: 90%;
+  animation: slide-in 1s ease-out; /* Applica l'animazione "slide-in" all'immagine */
+}
+
 
     .right-content {
       position: fixed;

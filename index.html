@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Hi, welcome to my portfolio! ✦ </title>
+    <title>Hi, welcome to my portfolio! ✦</title>
     <style>
         /* Stili CSS */
 
@@ -54,88 +54,111 @@
         }
 
         .random-images {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1; /* Porta l'elemento di sfondo al di sotto dell'immagine principale */
-      overflow: hidden; /* Nasconde eventuali parti delle immagini fuori dalla zona centrale */
-  }
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
 
         .random-image {
             position: absolute;
-            width: 500px; /* Imposta la larghezza desiderata */
-            height: auto; /* L'altezza si adatterà proporzionalmente */
+            width: 500px;
+            height: auto;
             animation: fadeInUp 1s ease-in-out forwards;
             outline: 0.5px solid white;
         }
 
         .footer {
-     position: fixed;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     padding: 20px;
-     font-family: 'Aeonik Regular', Arial, sans-serif;
-     font-size: 16px;
-     text-align: left;
-      color: white;
- }
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            font-family: 'Aeonik Regular', Arial, sans-serif;
+            font-size: 16px;
+            text-align: left;
+            color: white;
+        }
 
- .footer-right {
-     position: fixed;
-     bottom: 0;
-     right: 0;
-     padding: 20px;
-     font-family: 'Aeonik Regular', Arial, sans-serif;
-     font-size: 16px;
-     text-align: right;
-      color: white;
- }
+        .footer-right {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            padding: 20px;
+            font-family: 'Aeonik Regular', Arial, sans-serif;
+            font-size: 16px;
+            text-align: right;
+            color: white;
+        }
 
- .main-image {
-    max-width: 60%;
-    max-height: 60%;
-    z-index: 1; /* Porta l'immagine principale al di sopra delle immagini casuali */
-    mix-blend-mode: difference;
-}
-
-
- .center-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
-
-.center-image img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.center-bottom-image {
+        .another-bottom-image {
           position: fixed;
-          bottom: 0px;
+          top: 50%;
           left: 50%;
+          transform: translate(-100%, -50%);
+            z-index: -1;
+            mix-blend-mode: difference;
+        }
+
+        .another-bottom-image img {
+          max-width: 200%;
+          max-height: 200%;
+
+   }
 
 
-      }
+        .main-image {
+            max-width: 60%;
+            max-height: 60%;
+            z-index: 1;
+            mix-blend-mode: difference;
+        }
 
-      .center-bottom-image img {
-          max-width: 10%;
-          max-height: 10%;
-      }
+        .center-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
 
+        .center-image img {
+            max-width: 100%;
+            max-height: 100%;
+        }
 
+        .top-in-image {
+            animation: top-in 1s ease-in-out forwards;
+        }
+
+        @keyframes top-in {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .center-bottom-image {
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+        }
+
+        .center-bottom-image img {
+            max-width: 10%;
+            max-height: 10%;
+        }
 
     </style>
-
 </head>
 
 <body>
@@ -153,68 +176,67 @@
     <!-- Le immagini casuali verranno aggiunte qui -->
 </div>
 
-  <div class="center-image">
-     <img src="img/homeimg2.png" alt="Image" class="main-image">
- </div>
-
-
-  <div class="footer">chiara davoli</div>
-<div class="footer-right">2023</div>
-
+<div class="center-image">
+    <img src="img/homeimg3.png" alt="Image" class="main-image top-in-image">
 </div>
+
+<div class="another-bottom-image">
+    <img src="img/homeimg4.png" alt="Immagine Sottostante">
+</div>
+
+<div class="footer">chiara davoli</div>
+<div class="footer-right">2023</div>
 
 <div class="center-bottom-image">
     <img src="img/sparkle-03.png" alt="Image">
 </div>
 
 <script>
-       document.addEventListener("DOMContentLoaded", function() {
-           setTimeout(function() {
-               const randomImageUrls = [
-                   "img/nuur.png",
-                   "img/biolago.png",
-                   "img/multiway.png",
-                   "img/collaterale.png",
-                   "img/inverso.png",
-                   "img/aphonia.png",
-                   "img/caliptra.png"
-               ];
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+            const randomImageUrls = [
+                "img/nuur.png",
+                "img/biolago.png",
+                "img/multiway.png",
+                "img/collaterale.png",
+                "img/inverso.png",
+                "img/aphonia.png",
+                "img/caliptra.png"
+            ];
 
-               const randomImageContainer = document.querySelector(".random-images");
+            const randomImageContainer = document.querySelector(".random-images");
 
-               function displayRandomImage(index) {
-                   if (index < randomImageUrls.length) {
-                       const randomImage = document.createElement("img");
-                       randomImage.src = randomImageUrls[index];
-                       randomImage.classList.add("random-image");
+            function displayRandomImage(index) {
+                if (index < randomImageUrls.length) {
+                    const randomImage = document.createElement("img");
+                    randomImage.src = randomImageUrls[index];
+                    randomImage.classList.add("random-image");
 
-                       const screenWidth = window.innerWidth;
-                       const screenHeight = window.innerHeight;
-                       const imageWidth = 150; // Larghezza dell'immagine
-                       const imageHeight = 150; // Altezza dell'immagine
+                    const screenWidth = window.innerWidth;
+                    const screenHeight = window.innerHeight;
+                    const imageWidth = 150;
+                    const imageHeight = 150;
 
-                       const centerX = screenWidth / 2 - imageWidth / 2;
-                       const centerY = screenHeight / 2 - imageHeight / 2;
+                    const centerX = screenWidth / 2 - imageWidth / 2;
+                    const centerY = screenHeight / 2 - imageHeight / 2;
 
-                       const randomX = centerX + (Math.random() - 0.5) * (screenWidth / 2);
-                       const randomY = centerY + (Math.random() - 0.5) * (screenHeight / 2);
+                    const randomX = centerX + (Math.random() - 0.5) * (screenWidth / 2);
+                    const randomY = centerY + (Math.random() - 0.5) * (screenHeight / 2);
 
-                       randomImage.style.left = randomX + "px"; // Posizione orizzontale casuale
-                       randomImage.style.top = randomY + "px"; // Posizione verticale casuale
-                       randomImage.style.animationDelay = index * 0.5 + "s";
-                       randomImageContainer.appendChild(randomImage);
+                    randomImage.style.left = randomX + "px";
+                    randomImage.style.top = randomY + "px";
+                    randomImage.style.animationDelay = index * 0.5 + "s";
+                    randomImageContainer.appendChild(randomImage);
 
-                       setTimeout(function() {
-                        
-                           displayRandomImage(index + 1);
-                       }, 1000);
-                   }
-               }
+                    setTimeout(function() {
+                        displayRandomImage(index + 1);
+                    }, 1000);
+                }
+            }
 
-               displayRandomImage(0);
-           }, 2000);
-       });
-
-   </script>
+            displayRandomImage(0);
+        }, 2000);
+    });
+</script>
 </body>
 </html>
